@@ -1,0 +1,21 @@
+/** Tables */
+table { margin-bottom: 30px; width: 100%; text-align: left; color: #3f3f3f; border-collapse: collapse; border: 1px solid #e8e8e8; }
+
+table tr:nth-child(even) { background-color: #f7f7f7; }
+
+table th, table td { padding: 10px 15px; }
+
+table th { background-color: #f0f0f0; border: 1px solid #e0e0e0; }
+
+table td { border: 1px solid #e8e8e8; }
+
+
+@media screen and (max-width: 800px) { table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; -ms-overflow-style: -ms-autohiding-scrollbar; } }
+
+.social-media-list, .pagination { display: table; margin: 0 auto; }
+
+table { display: block; overflow-x: auto; white-space: nowrap; font-size: 75%; border: none; }
+
+table th { text-align: center; }
+
+table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
