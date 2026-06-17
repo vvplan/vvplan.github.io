@@ -1,42 +1,135 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="zh-CN">
+<head>
   <meta charset="utf-8">
-<title>虚谷计划 | 中国的开源教育计划</title>
-<meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="虚谷计划" />
-<meta name="description" content="中国的开源教育计划。" />
-<meta property="og:description" content="中国的开源教育计划。" />
-<meta property="og:site_name" content="虚谷计划" />
-<script type="application/ld+json">
-{"description":"中国的开源教育计划。","@type":"WebSite","headline":"虚谷计划","url":"/vvboard/","name":"虚谷计划","@context":"https://schema.org"}</script>
-<link rel="stylesheet" href="css/style.css">
-</head><body><header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">虚谷计划</a><nav class="site-nav">
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-        <div class="trigger"><a class="page-link" href="/list.html">项目列表</a><a class="page-link" href="/about">关于我们</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-<br>
-<div class="wrapper">
-        <div class="home">
-<div align="left" class="col-4 d-table-cell p-3 v-align-middle"><p width="80%" class="post-meta-description">    目前虚谷计划旗下有虚谷号、掌控板、乐造模块和虚谷物联四个开源教育项目。</p></div>
-</div>
-</div>
-</main>
-<div align="center"><table align="center" width="760px" style="text-align: center;"> <tr> <th>项目名称</th><th>项目简介</th><th>操作</th></tr>
-<tr><td width="80px">虚谷号</td> <td style="text-align: left;">一款开源的迷你电脑，集成了高性能处理器和通用单片机芯片，内置多种通信和扩展接口，既可以作为一台完整的电脑使用，也可以作为一个微型的可编程智能终端，为人工智能教育而设计。</td><td width="80px"> <a href="/vvboard">访问</a> </td>  </tr>
-<tr><td style="">掌控板</td> <td style="text-align: left;">采用物联网芯片ESP32，整合了常见的输入输出模块，支持Wi-Fi和蓝牙，是专为青少年编程教育而设计的一款开源硬件。</td> <td> <a href="/vvboard">访问</a></td> </tr>
-<tr><td>乐造模块</td> <td style="text-align: left;">利用激光切割技术加工的木质结构件，支持常见的电子模块，为创客教育与STEAM提供了低成本的结构件方案。</td> <td> <a href="/laserblock">访问</a> </td></tr> 
-<tr> <td>虚谷物联</td> <td style="text-align: left;">利用可以布署在本地的MQTT服务器软件，结合掌控板、虚谷号搭建各种物联网应用，旨在推进中小学物联网技术的教学。</td> <td> <a href="/vvlink">访问</a> </td></tr> 
-</table></div>
-<br>
-</body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目列表 | 虚谷计划</title>
+  <meta name="description" content="虚谷计划旗下开源教育项目列表：虚谷号、掌控板、乐造模块、虚谷物联。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header scrolled" id="header">
+    <div class="container nav-container">
+      <a class="logo" href="/">
+        <span class="logo-mark">虚</span>
+        <span class="logo-text">虚谷计划</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#about">关于计划</a>
+        <a href="index.html#projects">开源项目</a>
+        <a href="index.html#ecosystem">生态伙伴</a>
+        <a href="list.html" class="btn btn-sm btn-outline">项目列表</a>
+      </nav>
+      <button class="menu-toggle" aria-label="菜单" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about">关于计划</a>
+    <a href="index.html#projects">开源项目</a>
+    <a href="index.html#ecosystem">生态伙伴</a>
+    <a href="list.html">项目列表</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>项目列表</h1>
+      <p>虚谷计划旗下四大开源教育项目，覆盖硬件、软件与教学资源。</p>
+    </div>
+  </section>
+
+  <!-- List -->
+  <section class="section-list">
+    <div class="container">
+      <div class="list-table-wrap">
+        <table class="list-table">
+          <thead>
+            <tr>
+              <th>项目名称</th>
+              <th>项目简介</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>虚谷号</td>
+              <td>一款开源的迷你电脑，集成了高性能处理器和通用单片机芯片，内置多种通信和扩展接口，既可以作为一台完整的电脑使用，也可以作为一个微型的可编程智能终端，为人工智能教育而设计。</td>
+              <td><a href="/vvboard" class="btn btn-primary btn-sm">访问</a></td>
+            </tr>
+            <tr>
+              <td>掌控板</td>
+              <td>采用物联网芯片 ESP32，整合了常见的输入输出模块，支持 Wi-Fi 和蓝牙，是专为青少年编程教育而设计的一款开源硬件。</td>
+              <td><a href="/handpy" class="btn btn-primary btn-sm">访问</a></td>
+            </tr>
+            <tr>
+              <td>乐造模块</td>
+              <td>利用激光切割技术加工的木质结构件，支持常见的电子模块，为创客教育与 STEAM 提供了低成本的结构件方案。</td>
+              <td><a href="/laserblock" class="btn btn-primary btn-sm">访问</a></td>
+            </tr>
+            <tr>
+              <td>虚谷物联</td>
+              <td>利用可以部署在本地的 MQTT 服务器软件，结合掌控板、虚谷号搭建各种物联网应用，旨在推进中小学物联网技术的教学。</td>
+              <td><a href="/vvlink" class="btn btn-primary btn-sm">访问</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="/">
+            <span class="logo-mark">虚</span>
+            <span class="logo-text">虚谷计划</span>
+          </a>
+          <p>中国的开源教育计划，让开源硬件点亮每一间课堂。</p>
+        </div>
+        <div class="footer-links">
+          <h4>项目</h4>
+          <a href="/vvboard">虚谷号</a>
+          <a href="/handpy">掌控板</a>
+          <a href="/laserblock">乐造模块</a>
+          <a href="/vvlink">虚谷物联</a>
+        </div>
+        <div class="footer-links">
+          <h4>导航</h4>
+          <a href="list.html">项目列表</a>
+          <a href="index.html#about">关于我们</a>
+          <a href="index.html#projects">开源项目</a>
+          <a href="index.html#ecosystem">生态伙伴</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 虚谷计划组委会 2020 — 2026. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+</body>
 </html>
