@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>项目列表 | 虚谷计划</title>
-  <meta name="description" content="虚谷计划旗下开源教育项目列表：虚谷号、掌控板、乐造模块、虚谷物联。">
+  <meta name="description" content="虚谷计划旗下开源教育项目列表：虚谷号、掌控板、乐造模块、虚谷物联、XEduPro、OpenHydra、QuickForm、QuickClass。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -19,8 +19,9 @@
         <span class="logo-text">虚谷计划</span>
       </a>
       <nav class="main-nav">
-        <a href="index.html#about">关于计划</a>
-        <a href="index.html#projects">开源项目</a>
+        <a href="about.html">关于计划</a>
+        <a href="maker.html">创客教育</a>
+        <a href="index.html#ai">人工智能</a>
         <a href="index.html#ecosystem">生态伙伴</a>
         <a href="list.html" class="btn btn-sm btn-outline">项目列表</a>
       </nav>
@@ -32,8 +33,9 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html#about">关于计划</a>
-    <a href="index.html#projects">开源项目</a>
+    <a href="about.html">关于计划</a>
+    <a href="maker.html">创客教育</a>
+    <a href="index.html#ai">人工智能</a>
     <a href="index.html#ecosystem">生态伙伴</a>
     <a href="list.html">项目列表</a>
   </div>
@@ -42,7 +44,7 @@
   <section class="page-header">
     <div class="container">
       <h1>项目列表</h1>
-      <p>虚谷计划旗下四大开源教育项目，覆盖硬件、软件与教学资源。</p>
+      <p>虚谷计划旗下八大开源教育项目，覆盖创客硬件、物联网与人工智能教育。</p>
     </div>
   </section>
 
@@ -55,29 +57,76 @@
             <tr>
               <th>项目名称</th>
               <th>项目简介</th>
-              <th>操作</th>
+              <th>发起人（单位）</th>
+              <th>发起时间</th>
+              <th>状态</th>
+              <th>详情</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>虚谷号</td>
-              <td>一款开源的迷你电脑，集成了高性能处理器和通用单片机芯片，内置多种通信和扩展接口，既可以作为一台完整的电脑使用，也可以作为一个微型的可编程智能终端，为人工智能教育而设计。</td>
-              <td><a href="/vvboard" class="btn btn-primary btn-sm">访问</a></td>
+              <td>一款能运行 Python 的开源硬件。</td>
+              <td>谢作如、希科普</td>
+              <td>2018</td>
+              <td><span class="project-status status-stopped">已停止</span></td>
+              <td><a href="https://www.vvplan.cn/vvboard/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
             </tr>
             <tr>
               <td>掌控板</td>
-              <td>采用物联网芯片 ESP32，整合了常见的输入输出模块，支持 Wi-Fi 和蓝牙，是专为青少年编程教育而设计的一款开源硬件。</td>
-              <td><a href="/handpy" class="btn btn-primary btn-sm">访问</a></td>
-            </tr>
-            <tr>
-              <td>乐造模块</td>
-              <td>利用激光切割技术加工的木质结构件，支持常见的电子模块，为创客教育与 STEAM 提供了低成本的结构件方案。</td>
-              <td><a href="/laserblock" class="btn btn-primary btn-sm">访问</a></td>
+              <td>一款集成常见电子模块的开源硬件，已成为国内中小学创客教育最常用的开源硬件之一。</td>
+              <td>梁森山、盛思科技</td>
+              <td>2018</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><a href="https://www.vvplan.cn/handpy/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
             </tr>
             <tr>
               <td>虚谷物联</td>
-              <td>利用可以部署在本地的 MQTT 服务器软件，结合掌控板、虚谷号搭建各种物联网应用，旨在推进中小学物联网技术的教学。</td>
-              <td><a href="/vvlink" class="btn btn-primary btn-sm">访问</a></td>
+              <td>一套开箱即用物联网工具包，其 MQTT 服务器“SIoT”已成为中小学物联网教学的重要工具。</td>
+              <td>谢作如、DFRobot</td>
+              <td>2019</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><a href="https://www.vvplan.cn/vvlink/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+            </tr>
+            <tr>
+              <td>乐造模块</td>
+              <td>利用激光切割技术加工的木质结构件，为创客教育与 STEAM 提供低成本结构件方案。</td>
+              <td>吴俊杰、雷宇科技</td>
+              <td>2020</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><a href="https://www.vvplan.cn/laserblock/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+            </tr>
+            <tr>
+              <td>XEduPro</td>
+              <td>一套开箱即用的人工智能学习工具，是人工智能初学者必用学习工具。</td>
+              <td>谢作如、钟柏昌</td>
+              <td>2022</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><a href="https://xedupro.cn/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+            </tr>
+            <tr>
+              <td>OpenHydra</td>
+              <td>为中小学设计的 AI 教学平台。</td>
+              <td>谢作如、谕视科技</td>
+              <td>2024</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><a href="https://openhydra.net/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+            </tr>
+            <tr>
+              <td>QuickForm</td>
+              <td>为 AI 大模型开发交互网页设计的数据服务，拥有 3 万多教师用户。</td>
+              <td>谢作如、方建文</td>
+              <td>2025</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><a href="https://quickform.cc/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+            </tr>
+            <tr>
+              <td>QuickClass</td>
+              <td>一个 AI 驱动的课堂教学辅助平台。</td>
+              <td>管雪沨</td>
+              <td>2026</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><a href="https://gitee.com/maoyouhui/quickclass-release/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
             </tr>
           </tbody>
         </table>
@@ -94,7 +143,7 @@
             <span class="logo-mark">虚</span>
             <span class="logo-text">虚谷计划</span>
           </a>
-          <p>中国的开源教育计划，让开源硬件点亮每一间课堂。</p>
+          <p>中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
         </div>
         <div class="footer-links">
           <h4>项目</h4>
@@ -106,13 +155,13 @@
         <div class="footer-links">
           <h4>导航</h4>
           <a href="list.html">项目列表</a>
-          <a href="index.html#about">关于我们</a>
-          <a href="index.html#projects">开源项目</a>
-          <a href="index.html#ecosystem">生态伙伴</a>
+          <a href="about.html">关于我们</a>
+          <a href="maker.html">创客教育</a>
+          <a href="index.html#ai">人工智能</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 虚谷计划组委会 2020 — 2026. 保留所有权利。</p>
+        <p>© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
       </div>
     </div>
   </footer>
