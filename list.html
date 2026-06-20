@@ -4,11 +4,153 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>项目列表 | 虚谷计划</title>
-  <meta name="description" content="虚谷计划旗下开源教育项目列表：虚谷号、掌控板、乐造模块、虚谷物联、XEduPro、OpenHydra、QuickForm、QuickClass。">
+  <meta name="description" content="虚谷计划是一个包含硬件和软件的开源教育项目，由一线教师联合高校、创客空间和科技企业共同发起，致力于为中国青少年提供完整、开放、可复制、可实践的人工智能与科技教育解决方案。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .project-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .project-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    .project-modal__panel {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+      transform: translateY(16px);
+      transition: transform 0.25s ease;
+      overflow: hidden;
+    }
+    .project-modal.active .project-modal__panel {
+      transform: translateY(0);
+    }
+    .project-modal__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      color: #fff;
+    }
+    .project-modal__brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .project-modal__icon {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 14px;
+      padding: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+    .project-modal__header h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .project-modal__close {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .project-modal__close:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .project-modal__body {
+      padding: 28px;
+    }
+    .project-modal__row {
+      margin-bottom: 20px;
+    }
+    .project-modal__row:last-child {
+      margin-bottom: 0;
+    }
+    .project-modal__label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+    .project-modal__value {
+      font-size: 1rem;
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    .project-modal__value a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      word-break: break-all;
+    }
+    .project-modal__value a:hover {
+      color: var(--color-primary-dark);
+    }
+    .project-modal__empty {
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .list-table th:nth-child(3),
+    .list-table td:nth-child(3),
+    .list-table th:nth-child(4),
+    .list-table td:nth-child(4) {
+      white-space: nowrap;
+      min-width: 90px;
+    }
+    .list-table th:nth-child(3),
+    .list-table td:nth-child(3) {
+      min-width: 100px;
+    }
+    .list-table th:nth-child(4),
+    .list-table td:nth-child(4) {
+      min-width: 110px;
+    }
+    @media (max-width: 640px) {
+      .project-modal__header,
+      .project-modal__body {
+        padding: 20px 24px;
+      }
+      .project-modal__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+      }
+      .project-modal__brand {
+        gap: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -21,7 +163,7 @@
       <nav class="main-nav">
         <a href="about.html">关于计划</a>
         <a href="maker.html">创客教育</a>
-        <a href="index.html#ai">人工智能</a>
+        <a href="ai.html">人工智能</a>
         <a href="index.html#ecosystem">生态伙伴</a>
         <a href="list.html" class="btn btn-sm btn-outline">项目列表</a>
       </nav>
@@ -35,7 +177,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="about.html">关于计划</a>
     <a href="maker.html">创客教育</a>
-    <a href="index.html#ai">人工智能</a>
+    <a href="ai.html">人工智能</a>
     <a href="index.html#ecosystem">生态伙伴</a>
     <a href="list.html">项目列表</a>
   </div>
@@ -44,7 +186,7 @@
   <section class="page-header">
     <div class="container">
       <h1>项目列表</h1>
-      <p>虚谷计划旗下八大开源教育项目，覆盖创客硬件、物联网与人工智能教育。</p>
+      <p>虚谷计划最早从 2018 年发起，一开始以创客教育为核心方向，先后形成了虚谷号、掌控板、虚谷物联和乐造模块等项目。2022 年之后，虚谷计划团队逐步转向人工智能教育，一些新的项目持续加入，如 XEduPro、OpenHydra、QuickForm 和 QuickClass。</p>
     </div>
   </section>
 
@@ -57,7 +199,6 @@
             <tr>
               <th>项目名称</th>
               <th>项目简介</th>
-              <th>发起人（单位）</th>
               <th>发起时间</th>
               <th>状态</th>
               <th>详情</th>
@@ -65,74 +206,93 @@
           </thead>
           <tbody>
             <tr>
-              <td>虚谷号</td>
-              <td>一款能运行 Python 的开源硬件。</td>
-              <td>谢作如、希科普</td>
-              <td>2018</td>
-              <td><span class="project-status status-stopped">已停止</span></td>
-              <td><a href="https://www.vvplan.cn/vvboard/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
-            </tr>
-            <tr>
-              <td>掌控板</td>
-              <td>一款集成常见电子模块的开源硬件，已成为国内中小学创客教育最常用的开源硬件之一。</td>
-              <td>梁森山、盛思科技</td>
-              <td>2018</td>
+              <td>QuickClass</td>
+              <td>一个 AI 驱动的课堂教学辅助平台。</td>
+              <td>2026 年</td>
               <td><span class="project-status status-active">持续中</span></td>
-              <td><a href="https://www.vvplan.cn/handpy/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
-            </tr>
-            <tr>
-              <td>虚谷物联</td>
-              <td>一套开箱即用物联网工具包，其 MQTT 服务器“SIoT”已成为中小学物联网教学的重要工具。</td>
-              <td>谢作如、DFRobot</td>
-              <td>2019</td>
-              <td><span class="project-status status-active">持续中</span></td>
-              <td><a href="https://www.vvplan.cn/vvlink/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
-            </tr>
-            <tr>
-              <td>乐造模块</td>
-              <td>利用激光切割技术加工的木质结构件，为创客教育与 STEAM 提供低成本结构件方案。</td>
-              <td>吴俊杰、雷宇科技</td>
-              <td>2020</td>
-              <td><span class="project-status status-active">持续中</span></td>
-              <td><a href="https://www.vvplan.cn/laserblock/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
-            </tr>
-            <tr>
-              <td>XEduPro</td>
-              <td>一套开箱即用的人工智能学习工具，是人工智能初学者必用学习工具。</td>
-              <td>谢作如、钟柏昌</td>
-              <td>2022</td>
-              <td><span class="project-status status-active">持续中</span></td>
-              <td><a href="https://xedupro.cn/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
-            </tr>
-            <tr>
-              <td>OpenHydra</td>
-              <td>为中小学设计的 AI 教学平台。</td>
-              <td>谢作如、谕视科技</td>
-              <td>2024</td>
-              <td><span class="project-status status-active">持续中</span></td>
-              <td><a href="https://openhydra.net/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+              <td><button class="btn btn-primary btn-sm" data-project="QuickClass" data-image="images/quickclass.png" data-founder="管雪沨" data-repo="https://gitee.com/maoyouhui/quickclass-release/" data-repo-label="Gitee">详情</button></td>
             </tr>
             <tr>
               <td>QuickForm</td>
               <td>为 AI 大模型开发交互网页设计的数据服务，拥有 3 万多教师用户。</td>
-              <td>谢作如、方建文</td>
-              <td>2025</td>
+              <td>2025 年</td>
               <td><span class="project-status status-active">持续中</span></td>
-              <td><a href="https://quickform.cc/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+              <td><button class="btn btn-primary btn-sm" data-project="QuickForm" data-image="images/quickform.jpg" data-founder="谢作如、方建文" data-homepage="https://quickform.cc/" data-repo="https://github.com/wstlab/quickform" data-repo-label="GitHub">详情</button></td>
             </tr>
             <tr>
-              <td>QuickClass</td>
-              <td>一个 AI 驱动的课堂教学辅助平台。</td>
-              <td>管雪沨</td>
-              <td>2026</td>
+              <td>OpenHydra</td>
+              <td>为中小学设计的 AI 教学平台。</td>
+              <td>2024 年</td>
               <td><span class="project-status status-active">持续中</span></td>
-              <td><a href="https://gitee.com/maoyouhui/quickclass-release/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">访问</a></td>
+              <td><button class="btn btn-primary btn-sm" data-project="OpenHydra" data-image="images/openhydra.png" data-founder="谢作如、钟柏昌" data-homepage="https://openhydra.net/" data-repo="https://github.com/openhydra/" data-repo-label="GitHub">详情</button></td>
+            </tr>
+            <tr>
+              <td>XEduPro</td>
+              <td>一套开箱即用的人工智能学习工具，是人工智能初学者必用学习工具。</td>
+              <td>2022 年</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><button class="btn btn-primary btn-sm" data-project="XEduPro" data-image="images/xedu-logo.svg" data-founder="谢作如、钟柏昌" data-homepage="https://xedupro.cn/" data-repo="https://github.com/XEduPro" data-repo-label="GitHub">详情</button></td>
+            </tr>
+            <tr>
+              <td>乐造模块</td>
+              <td>利用激光切割技术加工的木质结构件，为创客教育与 STEAM 提供低成本结构件方案。</td>
+              <td>2020 年</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><button class="btn btn-primary btn-sm" data-project="乐造模块" data-image="images/laserblock-logo.jpg" data-founder="专委会、雷宇科技" data-homepage="https://www.vvplan.cn/laserblock/">详情</button></td>
+            </tr>
+            <tr>
+              <td>虚谷物联</td>
+              <td>一套开箱即用物联网工具包，其 MQTT 服务器“SIoT”已成为中小学物联网教学的重要工具。</td>
+              <td>2019 年</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><button class="btn btn-primary btn-sm" data-project="虚谷物联" data-image="images/vvlink-logo.jpg" data-founder="专委会、DFRobot" data-homepage="https://www.vvplan.cn/vvlink/" data-repo="https://github.com/vvlink/SIoT" data-repo-label="GitHub">详情</button></td>
+            </tr>
+            <tr>
+              <td>虚谷号</td>
+              <td>一款能运行 Python 的开源硬件。</td>
+              <td>2018 年</td>
+              <td><span class="project-status status-stopped">已停止</span></td>
+              <td><button class="btn btn-primary btn-sm" data-project="虚谷号" data-image="images/vvboard-logo.jpg" data-founder="专委会、希科普" data-homepage="https://www.vvplan.cn/vvboard/" data-repo="https://github.com/vvlink/vvBoard-docs" data-repo-label="GitHub">详情</button></td>
+            </tr>
+            <tr>
+              <td>掌控板</td>
+              <td>一款集成常见电子模块的开源硬件，已成为国内中小学创客教育最常用的开源硬件之一。</td>
+              <td>2018 年</td>
+              <td><span class="project-status status-active">持续中</span></td>
+              <td><button class="btn btn-primary btn-sm" data-project="掌控板" data-image="images/handpy-logo.jpg" data-founder="专委会、盛思科技" data-homepage="https://www.vvplan.cn/handpy/" data-repo="https://github.com/labplus-cn/mPython/" data-repo-label="GitHub">详情</button></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
+
+  <!-- Project Detail Modal -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="project-modal__panel">
+      <div class="project-modal__header">
+        <div class="project-modal__brand">
+          <img id="modalImage" src="" alt="" class="project-modal__icon" hidden>
+          <h3 id="modalTitle">项目详情</h3>
+        </div>
+        <button class="project-modal__close" id="modalClose" aria-label="关闭">&times;</button>
+      </div>
+      <div class="project-modal__body">
+        <div class="project-modal__row">
+          <span class="project-modal__label">发起人（单位）</span>
+          <div class="project-modal__value" id="modalFounder">—</div>
+        </div>
+        <div class="project-modal__row">
+          <span class="project-modal__label">项目主页</span>
+          <div class="project-modal__value" id="modalHomepage">—</div>
+        </div>
+        <div class="project-modal__row">
+          <span class="project-modal__label">代码仓库</span>
+          <div class="project-modal__value" id="modalRepo">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -157,7 +317,7 @@
           <a href="list.html">项目列表</a>
           <a href="about.html">关于我们</a>
           <a href="maker.html">创客教育</a>
-          <a href="index.html#ai">人工智能</a>
+          <a href="ai.html">人工智能</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -178,6 +338,67 @@
         menuToggle.classList.remove('active');
         mobileMenu.classList.remove('open');
       });
+    });
+
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    const modalFounder = document.getElementById('modalFounder');
+    const modalHomepage = document.getElementById('modalHomepage');
+    const modalRepo = document.getElementById('modalRepo');
+    const modalClose = document.getElementById('modalClose');
+
+    function linkHtml(url, label) {
+      if (!url || url === '—') {
+        return '<span class="project-modal__empty">暂无</span>';
+      }
+      const text = label || url;
+      return `<a href="${url}" target="_blank" rel="noopener">${text}</a>`;
+    }
+
+    function openModal(button) {
+      const project = button.dataset.project;
+      const image = button.dataset.image;
+      const founder = button.dataset.founder;
+      const homepage = button.dataset.homepage;
+      const repo = button.dataset.repo;
+      const repoLabel = button.dataset.repoLabel;
+
+      modalTitle.textContent = project ? `${project} 详情` : '项目详情';
+      if (image) {
+        modalImage.src = image;
+        modalImage.alt = project ? `${project} 图标` : '项目图标';
+        modalImage.hidden = false;
+      } else {
+        modalImage.hidden = true;
+        modalImage.src = '';
+      }
+      modalFounder.textContent = founder || '—';
+      modalHomepage.innerHTML = linkHtml(homepage, homepage);
+      modalRepo.innerHTML = linkHtml(repo, repoLabel || 'GitHub');
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      modalClose.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-project]').forEach(button => {
+      button.addEventListener('click', () => openModal(button));
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
     });
   </script>
 </body>

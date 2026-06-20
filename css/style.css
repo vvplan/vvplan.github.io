@@ -663,6 +663,17 @@ a {
   color: var(--color-text);
 }
 
+.project-founder,
+.ai-founder {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+.project-founder strong,
+.ai-founder strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
 .project-body p {
   color: var(--color-text-secondary);
   line-height: 1.7;
@@ -681,6 +692,150 @@ a {
 
 .project-card:hover .project-link {
   gap: 12px;
+}
+
+/* ========================================
+   Projects Scroll
+   ======================================== */
+
+.projects-scroll-section {
+  background: var(--color-bg-soft);
+  overflow: hidden;
+}
+
+.projects-scroll-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.projects-scroll-header .section-subtitle {
+  max-width: 560px;
+  margin-top: 12px;
+}
+
+.projects-scroll-wrap {
+  position: relative;
+  margin: 0 -24px;
+  padding: 0 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.projects-scroll-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-scroll-wrap:active {
+  cursor: grabbing;
+}
+
+.projects-scroll-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding: 8px 4px 24px;
+  margin: -8px -4px -24px;
+}
+
+.project-scroll-card {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-scroll-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.project-scroll-image {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--color-bg-soft) 0%, #fff 100%);
+}
+
+.project-scroll-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.project-scroll-body {
+  padding: 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-scroll-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.project-scroll-meta > span:first-child {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.project-scroll-body h3 {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: var(--color-text);
+}
+
+.project-scroll-body p {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.project-scroll-link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.project-scroll-card:hover .project-scroll-link {
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .projects-scroll-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .project-scroll-card {
+    flex: 0 0 220px;
+  }
+
+  .project-scroll-image {
+    height: 100px;
+  }
 }
 
 /* ========================================
@@ -929,7 +1084,7 @@ a {
 
 .ai-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -951,14 +1106,17 @@ a {
 }
 
 .ai-icon {
-  height: 140px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #fff;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+}
+.ai-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
 }
 
 .ai-xedu .ai-icon { background: linear-gradient(135deg, #1a56db 0%, #3b82f6 100%); }
@@ -1213,12 +1371,6 @@ a {
    Responsive
    ======================================== */
 
-@media (max-width: 1200px) {
-  .ai-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 992px) {
   .features-grid {
     grid-template-columns: 1fr;
@@ -1226,10 +1378,6 @@ a {
 
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .ai-grid {
-    grid-template-columns: 1fr 1fr;
   }
 
   .ecosystem-inner {
@@ -1299,6 +1447,10 @@ a {
 
   .cta-card {
     padding: 48px 28px;
+  }
+
+  .ai-grid {
+    grid-template-columns: 1fr;
   }
 
   .list-table th,
