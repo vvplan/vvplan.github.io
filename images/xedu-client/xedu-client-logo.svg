@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" role="img" aria-label="XEdu Client">
+  <defs>
+    <linearGradient id="xeduClientLogoBg" x1="4" y1="3" x2="40" y2="41" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6b70e8"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="42" height="42" rx="10" fill="url(#xeduClientLogoBg)" stroke="#fff" stroke-width="2"/>
+  <path d="M12.5 11.5L31.5 32.5M31.5 11.5L12.5 32.5" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+</svg>

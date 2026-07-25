@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XEdu Client | 虚谷计划</title>
+  <meta name="description" content="XEdu Client 是面向 AI 教学场景的桌面实验工作台，帮助教师组织课程任务、互动体验、Scratch 和 Python/Jupyter 实验。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header scrolled" id="header">
+    <div class="container nav-container">
+      <a class="logo" href="/">
+        <span class="logo-mark">虚</span>
+        <span class="logo-text">虚谷计划</span>
+      </a>
+      <nav class="main-nav">
+        <a href="about.html">关于计划</a>
+        <a href="maker.html">创客教育</a>
+        <a href="ai.html">人工智能</a>
+        <a href="ecosystem.html">生态伙伴</a>
+        <a href="list.html" class="btn btn-sm btn-outline">项目列表</a>
+      </nav>
+      <button class="menu-toggle" aria-label="菜单" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">关于计划</a>
+    <a href="maker.html">创客教育</a>
+    <a href="ai.html">人工智能</a>
+    <a href="ecosystem.html">生态伙伴</a>
+    <a href="list.html">项目列表</a>
+  </div>
+
+  <section class="page-header xedu-page-header">
+    <div class="container xedu-hero">
+      <div class="xedu-hero-copy">
+        <div class="featured-project-meta">
+          <span class="featured-project-badge">2026 重点项目</span>
+          <span class="project-status status-active">持续中</span>
+        </div>
+        <h1>XEdu Client</h1>
+        <p class="xedu-hero-tagline">面向 AI 教学场景的桌面实验工作台</p>
+        <p class="xedu-hero-desc">
+          面向学校机房和课堂实验场景，把课程任务、互动体验、Scratch 图形编程与 Python/Jupyter
+          环境集中到同一桌面客户端，降低教师发课和学生进入实验的门槛。
+        </p>
+        <div class="xedu-pill-row">
+          <span>课程任务中心</span>
+          <span>互动体验</span>
+          <span>Scratch</span>
+          <span>Python 实验</span>
+        </div>
+      </div>
+      <div class="xedu-hero-visual">
+        <img src="images/xedu-client/course-task-center.png" alt="XEdu Client 课程任务中心与实验入口">
+      </div>
+      <div class="xedu-hero-footer">
+        <div class="xedu-hero-actions">
+          <a href="https://github.com/haitao926/xedu-client/releases/tag/V2.0" target="_blank" rel="noopener" class="btn btn-primary btn-lg">下载 V2.0 体验版</a>
+          <a href="https://github.com/XEduPro/xedu-client" target="_blank" rel="noopener" class="btn btn-outline btn-lg">查看源码</a>
+          <a href="https://github.com/XEduPro/xedu-client/blob/main/docs/teacher/INSTALL.md" target="_blank" rel="noopener" class="btn btn-outline btn-lg">教师文档</a>
+        </div>
+        <p class="xedu-release-note">V2.0 当前为预发布体验版；官网仅提供真实界面展示、下载与文档入口。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section xedu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">核心能力</span>
+        <h2 class="section-title">一套桌面入口，覆盖课堂里的三种主要实验方式</h2>
+      </div>
+      <div class="xedu-capability-grid">
+        <article class="xedu-capability-card">
+          <img src="images/xedu-client/interactive-experience.png" alt="XEdu Client 互动体验页面">
+          <div class="xedu-capability-copy">
+            <h3>互动体验</h3>
+            <p>教师可先用实时画面和关键点数据演示实验对象，再引导学生理解摄像头、人体关键点与 AI 模型结果的对应关系。</p>
+          </div>
+        </article>
+        <article class="xedu-capability-card">
+          <img src="images/xedu-client/scratch-workbench.png" alt="XEdu Client Scratch 图形编程界面">
+          <div class="xedu-capability-copy">
+            <h3>Scratch 图形编程</h3>
+            <p>学生直接在图形化工作区拼接积木，把人体感知、摄像头和课堂任务串成可运行作品，适合中学入门和项目展示。</p>
+          </div>
+        </article>
+        <article class="xedu-capability-card">
+          <img src="images/xedu-client/python-jupyter-lab.png" alt="XEdu Client 内置 Python Jupyter 实验界面">
+          <div class="xedu-capability-copy">
+            <h3>Python / Jupyter 实验</h3>
+            <p>进入 Jupyter Lab 后可直接阅读课程 Notebook、运行 Python 代码和调试实验步骤，适合教师备课与进阶实验教学。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section xedu-section xedu-section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">课堂路径</span>
+        <h2 class="section-title">教师发起更集中，学生进入更直接</h2>
+      </div>
+      <div class="xedu-path-grid">
+        <article class="xedu-path-card">
+          <h3>教师使用路径</h3>
+          <ol class="xedu-path-list">
+            <li>在课程任务中心选择对应课次与实验。</li>
+            <li>先演示互动体验，明确要观察的图像与数据。</li>
+            <li>按班级水平切换到 Scratch 或 Python 实验。</li>
+            <li>统一把安装与运行说明交给教师文档维护。</li>
+          </ol>
+        </article>
+        <article class="xedu-path-card">
+          <h3>学生学习路径</h3>
+          <ol class="xedu-path-list">
+            <li>从任务页进入同一节课的实验入口。</li>
+            <li>先理解现象，再在 Scratch 或 Notebook 中动手修改。</li>
+            <li>结合摄像头、关键点或硬件结果观察程序反馈。</li>
+            <li>把一次课堂任务发展成作品、代码或实验记录。</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section xedu-section">
+    <div class="container">
+      <div class="xedu-relationship">
+        <div>
+          <span class="section-tag">产品关系</span>
+          <h2 class="section-title">XEduPro 提供学习工具，XEdu Client 负责把课堂资源与实验入口组织到桌面端</h2>
+        </div>
+        <p>
+          这里展示的是面向学校真实使用场景的桌面客户端。它不是一个单独部署在 GitHub Pages 上的网页应用，
+          而是承接本地课程资源、互动实验、Scratch 与 Jupyter 环境的工作台。官网负责说明真实界面、引导下载体验版、查看源码与教师安装文档。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="/">
+            <span class="logo-mark">虚</span>
+            <span class="logo-text">虚谷计划</span>
+          </a>
+          <p>中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
+        </div>
+        <div class="footer-links">
+          <h4>热门项目</h4>
+          <a href="xedu-client.html">XEdu Client</a>
+          <a href="https://quickform.cc/" target="_blank" rel="noopener">QuickForm</a>
+          <a href="https://xedupro.cn/" target="_blank" rel="noopener">XEduPro</a>
+          <a href="https://openhydra.net/" target="_blank" rel="noopener">OpenHydra</a>
+        </div>
+        <div class="footer-links">
+          <h4>导航</h4>
+          <a href="list.html">项目列表</a>
+          <a href="about.html">关于我们</a>
+          <a href="maker.html">创客教育</a>
+          <a href="ai.html">人工智能</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
