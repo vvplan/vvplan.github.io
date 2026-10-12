@@ -10,22 +10,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-i18n-title="ecosystem.title" data-i18n-desc="ecosystem.metaDesc">
   <!-- Navigation -->
   <header class="site-header scrolled" id="header">
     <div class="container nav-container">
       <a class="logo" href="/">
         <span class="logo-mark">虚</span>
-        <span class="logo-text">虚谷计划</span>
+        <span class="logo-text" data-i18n="site.logoText">虚谷计划</span>
       </a>
       <nav class="main-nav">
-        <a href="about.html">关于计划</a>
-        <a href="maker.html">创客教育</a>
-        <a href="ai.html">人工智能</a>
-        <a href="ecosystem.html">生态伙伴</a>
-        <a href="list.html" class="btn btn-sm btn-outline">项目列表</a>
+        <a href="about.html" data-i18n="nav.about">关于计划</a>
+        <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+        <a href="ai.html" data-i18n="nav.ai">人工智能</a>
+        <a href="ecosystem.html" data-i18n="nav.ecosystem">生态伙伴</a>
+        <a href="list.html" class="btn btn-sm btn-outline" data-i18n="nav.list">项目列表</a>
+        <div class="lang-dropdown" data-i18n-dropdown>
+    <button class="btn btn-sm btn-lang lang-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Choose language">
+      <span class="lang-label">简体中文</span>
+      <span class="lang-caret">▾</span>
+    </button>
+    <div class="lang-dropdown-menu" role="listbox">
+      <button class="lang-option is-active" data-lang-option="zh" role="option" aria-selected="true">简体中文</button>
+      <button class="lang-option" data-lang-option="tw" role="option" aria-selected="false">繁體中文</button>
+      <button class="lang-option" data-lang-option="en" role="option" aria-selected="false">English</button>
+    </div>
+  </div>
       </nav>
-      <button class="menu-toggle" aria-label="菜单" id="menuToggle">
+      <button class="menu-toggle" aria-label="菜单" data-i18n-aria="nav.menu" id="menuToggle">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -33,18 +44,29 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="about.html">关于计划</a>
-    <a href="maker.html">创客教育</a>
-    <a href="ai.html">人工智能</a>
-    <a href="ecosystem.html">生态伙伴</a>
-    <a href="list.html">项目列表</a>
+    <a href="about.html" data-i18n="nav.about">关于计划</a>
+    <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+    <a href="ai.html" data-i18n="nav.ai">人工智能</a>
+    <a href="ecosystem.html" data-i18n="nav.ecosystem">生态伙伴</a>
+    <a href="list.html" data-i18n="nav.list">项目列表</a>
+    <div class="lang-dropdown lang-dropdown-mobile" data-i18n-dropdown>
+    <button class="btn btn-lang btn-lang-mobile lang-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Choose language">
+      <span class="lang-label">简体中文</span>
+      <span class="lang-caret">▾</span>
+    </button>
+    <div class="lang-dropdown-menu" role="listbox">
+      <button class="lang-option is-active" data-lang-option="zh" role="option" aria-selected="true">简体中文</button>
+      <button class="lang-option" data-lang-option="tw" role="option" aria-selected="false">繁體中文</button>
+      <button class="lang-option" data-lang-option="en" role="option" aria-selected="false">English</button>
+    </div>
+  </div>
   </div>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>生态伙伴</h1>
-      <p>携手共建开源教育未来，让优质的开源教育惠及每一位学生。</p>
+      <h1 data-i18n="ecosystem.pageTitle">生态伙伴</h1>
+      <p data-i18n="ecosystem.pageSubtitle">携手共建开源教育未来，让优质的开源教育惠及每一位学生。</p>
     </div>
   </section>
 
@@ -53,30 +75,30 @@
     <div class="container">
       <div class="ecosystem-inner">
         <div class="ecosystem-content">
-          <span class="section-tag">生态伙伴</span>
-          <h2 class="section-title">携手共建<br>开源教育未来</h2>
-          <p>虚谷计划的成长离不开一线教育工作者的实践反馈、高校研究者的学术支撑、创客空间的社区运营，以及企业工程师的技术贡献。我们期待与更多伙伴一起，让优质的开源教育惠及每一位学生。</p>
+          <span class="section-tag" data-i18n="nav.ecosystem">生态伙伴</span>
+          <h2 class="section-title"><span data-i18n="index.ecoTitle1">携手共建</span><br><span data-i18n="index.ecoTitle2">开源教育未来</span></h2>
+          <p data-i18n="index.ecoDesc">虚谷计划的成长离不开一线教育工作者的实践反馈、高校研究者的学术支撑、创客空间的社区运营，以及企业工程师的技术贡献。我们期待与更多伙伴一起，让优质的开源教育惠及每一位学生。</p>
           <div class="ecosystem-actions">
-            <a href="mailto:xiezuoru@qq.vip.com" class="btn btn-primary">成为伙伴</a>
-            <a href="list.html" class="btn btn-ghost">查看项目列表</a>
+            <a href="mailto:xiezuoru@qq.vip.com" class="btn btn-primary" data-i18n="index.ecoBecome">成为伙伴</a>
+            <a href="list.html" class="btn btn-ghost" data-i18n="index.ecoViewList">查看项目列表</a>
           </div>
         </div>
         <div class="ecosystem-roles">
           <div class="role-card">
-            <strong>一线教师</strong>
-            <span>课程实践 · 案例共创</span>
+            <strong data-i18n="eco.role1.name">一线教师</strong>
+            <span data-i18n="eco.role1.desc">课程实践 · 案例共创</span>
           </div>
           <div class="role-card">
-            <strong>高校院所</strong>
-            <span>学术研究 · 师资培训</span>
+            <strong data-i18n="eco.role2.name">高校院所</strong>
+            <span data-i18n="eco.role2.desc">学术研究 · 师资培训</span>
           </div>
           <div class="role-card">
-            <strong>创客空间</strong>
-            <span>社区运营 · 活动组织</span>
+            <strong data-i18n="eco.role3.name">创客空间</strong>
+            <span data-i18n="eco.role3.desc">社区运营 · 活动组织</span>
           </div>
           <div class="role-card">
-            <strong>科技企业</strong>
-            <span>硬件研发 · 技术支持</span>
+            <strong data-i18n="eco.role4.name">科技企业</strong>
+            <span data-i18n="eco.role4.desc">硬件研发 · 技术支持</span>
           </div>
         </div>
       </div>
@@ -87,141 +109,141 @@
   <section class="section section-steam">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">合作活动</span>
-        <h2 class="section-title">中小学STEAM教育大会</h2>
-        <p class="section-subtitle">一年一度 · 坚持公益 · 众师众创。从2013年温州的首次论坛出发，大会始终扎根一线，陪伴全国中小学创客、STEAM、人工智能与跨学科创新教育领域的教师共同成长。</p>
+        <span class="section-tag" data-i18n="steamTag">合作活动</span>
+        <h2 class="section-title" data-i18n="steamTitle">中小学STEAM教育大会</h2>
+        <p class="section-subtitle" data-i18n="steamSubtitle">一年一度 · 坚持公益 · 众师众创。从2013年温州的首次论坛出发，大会始终扎根一线，陪伴全国中小学创客、STEAM、人工智能与跨学科创新教育领域的教师共同成长。</p>
       </div>
       <div class="steam-stats">
         <div class="steam-stat">
           <div class="steam-stat-number">13</div>
-          <div class="steam-stat-label">届大会</div>
+          <div class="steam-stat-label" data-i18n="steam.stats1">届大会</div>
         </div>
         <div class="steam-stat">
           <div class="steam-stat-number">13</div>
-          <div class="steam-stat-label">座城市</div>
+          <div class="steam-stat-label" data-i18n="steam.stats2">座城市</div>
         </div>
         <div class="steam-stat">
           <div class="steam-stat-number">13</div>
-          <div class="steam-stat-label">年历程</div>
+          <div class="steam-stat-label" data-i18n="steam.stats3">年历程</div>
         </div>
       </div>
       <div class="steam-features">
         <div class="steam-feature">
           <div class="steam-feature-icon">🎯</div>
-          <h3>扎根一线</h3>
-          <p>大会坚持从一线教师的真实需求出发，汇聚教育专家、校长、教研员与教师，共同探讨教学实践中的真问题。</p>
+          <h3 data-i18n="steam.f1Title">扎根一线</h3>
+          <p data-i18n="steam.f1Desc">大会坚持从一线教师的真实需求出发，汇聚教育专家、校长、教研员与教师，共同探讨教学实践中的真问题。</p>
         </div>
         <div class="steam-feature">
           <div class="steam-feature-icon">🤝</div>
-          <h3>众师众创</h3>
-          <p>最早由民间一线教师发起，强调开源、分享与协作，形成了以教师社群为核心的众创生态。</p>
+          <h3 data-i18n="steam.f2Title">众师众创</h3>
+          <p data-i18n="steam.f2Desc">最早由民间一线教师发起，强调开源、分享与协作，形成了以教师社群为核心的众创生态。</p>
         </div>
         <div class="steam-feature">
           <div class="steam-feature-icon">🚀</div>
-          <h3>前沿引领</h3>
-          <p>从创客教育到STEAM教育，再到人工智能教育，大会始终站在中小学科技教育发展的最前沿。</p>
+          <h3 data-i18n="steam.f3Title">前沿引领</h3>
+          <p data-i18n="steam.f3Desc">从创客教育到STEAM教育，再到人工智能教育，大会始终站在中小学科技教育发展的最前沿。</p>
         </div>
         <div class="steam-feature">
           <div class="steam-feature-icon">❤️</div>
-          <h3>公益开放</h3>
-          <p>大会始终保持开源、草根、免费的特色，为教育工作者提供平等交流、共享资源的平台。</p>
+          <h3 data-i18n="steam.f4Title">公益开放</h3>
+          <p data-i18n="steam.f4Desc">大会始终保持开源、草根、免费的特色，为教育工作者提供平等交流、共享资源的平台。</p>
         </div>
       </div>
       <div class="steam-history">
         <div class="steam-history-item">
           <div class="steam-history-year">2025</div>
           <div class="steam-history-content">
-            <h3>第十三届 · 新疆乌鲁木齐</h3>
-            <p>主题：AI通识教育与STEAM教育融合：从理念到行动。在乌鲁木齐市第十九中学举行，汇聚全国300余名教育工作者，设置24个前沿主题工作坊。</p>
+            <h3 data-i18n="steam.h2025Title">第十三届 · 新疆乌鲁木齐</h3>
+            <p data-i18n="steam.h2025Desc">主题：AI通识教育与STEAM教育融合：从理念到行动。在乌鲁木齐市第十九中学举行，汇聚全国300余名教育工作者，设置24个前沿主题工作坊。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2024</div>
           <div class="steam-history-content">
-            <h3>第十二届 · 贵州遵义</h3>
-            <p>主题：人工智能教育与创新。在历史名城遵义举办，吸引全国各地千余名教育工作者参与，设置14个主题工作坊。</p>
+            <h3 data-i18n="steam.h2024Title">第十二届 · 贵州遵义</h3>
+            <p data-i18n="steam.h2024Desc">主题：人工智能教育与创新。在历史名城遵义举办，吸引全国各地千余名教育工作者参与，设置14个主题工作坊。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2023</div>
           <div class="steam-history-content">
-            <h3>第十一届 · 北京海淀</h3>
-            <p>主题：走向"科创输出"的人工智能教育。来自全国各地400多名代表共聚一堂，累计参会约两万四千人次，首次设立年度人物荣誉。</p>
+            <h3 data-i18n="steam.h2023Title">第十一届 · 北京海淀</h3>
+            <p data-i18n="steam.h2023Desc">主题：走向"科创输出"的人工智能教育。来自全国各地400多名代表共聚一堂，累计参会约两万四千人次，首次设立年度人物荣誉。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2022</div>
           <div class="steam-history-content">
-            <h3>第十届 · 浙江温州</h3>
-            <p>主题：创客教育与新一代人工智能。十年后大会再次回到温州，探讨创客教育与新一代人工智能的融合发展。</p>
+            <h3 data-i18n="steam.h2022Title">第十届 · 浙江温州</h3>
+            <p data-i18n="steam.h2022Desc">主题：创客教育与新一代人工智能。十年后大会再次回到温州，探讨创客教育与新一代人工智能的融合发展。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2021</div>
           <div class="steam-history-content">
-            <h3>第九届 · 线上</h3>
-            <p>主题：信息科技与跨学科学习。首次全程线上举办，超过7万人收看直播，聚焦信息科技与跨学科学习。</p>
+            <h3 data-i18n="steam.h2021Title">第九届 · 线上</h3>
+            <p data-i18n="steam.h2021Desc">主题：信息科技与跨学科学习。首次全程线上举办，超过7万人收看直播，聚焦信息科技与跨学科学习。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2020</div>
           <div class="steam-history-content">
-            <h3>第八届 · 浙江宁波杭州湾新区</h3>
-            <p>主题：开源生态构建，跨学科实践，促进高素质创新人才培养。约200人到场，线上7个分会场、超千人观看，举行中国开源机器人教育元年圆桌论坛。</p>
+            <h3 data-i18n="steam.h2020Title">第八届 · 浙江宁波杭州湾新区</h3>
+            <p data-i18n="steam.h2020Desc">主题：开源生态构建，跨学科实践，促进高素质创新人才培养。约200人到场，线上7个分会场、超千人观看，举行中国开源机器人教育元年圆桌论坛。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2019</div>
           <div class="steam-history-content">
-            <h3>第七届 · 浙江宁波杭州湾新区</h3>
-            <p>主题：STEAM教育、创客教育与普通高中信息技术实验。近600名教育工作者齐聚杭州湾，囊括32场学术报告与30个主题工作坊。</p>
+            <h3 data-i18n="steam.h2019Title">第七届 · 浙江宁波杭州湾新区</h3>
+            <p data-i18n="steam.h2019Desc">主题：STEAM教育、创客教育与普通高中信息技术实验。近600名教育工作者齐聚杭州湾，囊括32场学术报告与30个主题工作坊。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2018</div>
           <div class="steam-history-content">
-            <h3>第六届 · 吉林长春</h3>
-            <p>主题：STEAM教育与创客教育的新阶段。600多人参加，发布开源硬件掌控板，联合长春市首届校园创客嘉年华举办。</p>
+            <h3 data-i18n="steam.h2018Title">第六届 · 吉林长春</h3>
+            <p data-i18n="steam.h2018Desc">主题：STEAM教育与创客教育的新阶段。600多人参加，发布开源硬件掌控板，联合长春市首届校园创客嘉年华举办。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2017</div>
           <div class="steam-history-content">
-            <h3>第五届 · 山东蓬莱</h3>
-            <p>主题：STEAM教育与综合实践活动。在山东蓬莱召开，开展六大分论坛，全面探讨STEAM教育的中国之路。</p>
+            <h3 data-i18n="steam.h2017Title">第五届 · 山东蓬莱</h3>
+            <p data-i18n="steam.h2017Desc">主题：STEAM教育与综合实践活动。在山东蓬莱召开，开展六大分论坛，全面探讨STEAM教育的中国之路。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2016</div>
           <div class="steam-history-content">
-            <h3>第四届 · 广东佛山</h3>
-            <p>聚焦：创客教育实践与课程融合。论坛正式更名为"全国中小学STEAM教育大会"，吸引全国21省市近四百名教育工作者。</p>
+            <h3 data-i18n="steam.h2016Title">第四届 · 广东佛山</h3>
+            <p data-i18n="steam.h2016Desc">聚焦：创客教育实践与课程融合。论坛正式更名为"全国中小学STEAM教育大会"，吸引全国21省市近四百名教育工作者。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2015</div>
           <div class="steam-history-content">
-            <h3>第三届 · 上海嘉定</h3>
-            <p>聚焦：STEAM教育实践与创新。改由中国电子学会现代教育技术分会主办，任友群教授做《创客教育和STEAM教论辨析》主旨报告。</p>
+            <h3 data-i18n="steam.h2015Title">第三届 · 上海嘉定</h3>
+            <p data-i18n="steam.h2015Desc">聚焦：STEAM教育实践与创新。改由中国电子学会现代教育技术分会主办，任友群教授做《创客教育和STEAM教论辨析》主旨报告。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2014</div>
           <div class="steam-history-content">
-            <h3>第二届 · 江苏常州</h3>
-            <p>聚焦：STEAM教育课程设计与实施。海峡两岸创客教育团队开始密切互动，首次启用网络直播，在线人数近千人。</p>
+            <h3 data-i18n="steam.h2014Title">第二届 · 江苏常州</h3>
+            <p data-i18n="steam.h2014Desc">聚焦：STEAM教育课程设计与实施。海峡两岸创客教育团队开始密切互动，首次启用网络直播，在线人数近千人。</p>
           </div>
         </div>
         <div class="steam-history-item">
           <div class="steam-history-year">2013</div>
           <div class="steam-history-content">
-            <h3>第一届 · 浙江温州</h3>
-            <p>主题：中小学STEAM教育创新论坛。在温州中学成功举办，来自全国13个省市区的80多位代表齐聚，开启持续十余年的教师盛会。</p>
+            <h3 data-i18n="steam.h2013Title">第一届 · 浙江温州</h3>
+            <p data-i18n="steam.h2013Desc">主题：中小学STEAM教育创新论坛。在温州中学成功举办，来自全国13个省市区的80多位代表齐聚，开启持续十余年的教师盛会。</p>
           </div>
         </div>
       </div>
       <div class="section-cta">
-        <a href="https://steamedu.site/" target="_blank" rel="noopener" class="btn btn-primary">访问大会官网</a>
+        <a href="https://steamedu.site/" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="steam.visit">访问大会官网</a>
       </div>
     </div>
   </section>
@@ -230,11 +252,11 @@
   <section class="section section-cta-large">
     <div class="container">
       <div class="cta-card">
-        <h2>加入虚谷计划生态</h2>
-        <p>无论您是一线教师、高校研究者、创客空间运营者还是企业工程师，欢迎与我们联系，共同推动开源教育的发展。</p>
+        <h2 data-i18n="eco.ctaTitle">加入虚谷计划生态</h2>
+        <p data-i18n="eco.ctaDesc">无论您是一线教师、高校研究者、创客空间运营者还是企业工程师，欢迎与我们联系，共同推动开源教育的发展。</p>
         <div class="cta-actions">
-          <a href="mailto:xiezuoru@qq.vip.com" class="btn btn-light btn-lg">成为伙伴</a>
-          <a href="list.html" class="btn btn-ghost btn-lg">查看项目列表</a>
+          <a href="mailto:xiezuoru@qq.vip.com" class="btn btn-light btn-lg" data-i18n="eco.ctaBecome">成为伙伴</a>
+          <a href="list.html" class="btn btn-ghost btn-lg" data-i18n="index.ecoViewList">查看项目列表</a>
         </div>
       </div>
     </div>
@@ -247,33 +269,34 @@
         <div class="footer-brand">
           <a class="logo" href="/">
             <span class="logo-mark">虚</span>
-            <span class="logo-text">虚谷计划</span>
+            <span class="logo-text" data-i18n="site.logoText">虚谷计划</span>
           </a>
-          <p>中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
+          <p data-i18n="footer.tagline">中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
         </div>
         <div class="footer-links">
-          <h4>热门项目</h4>
+          <h4 data-i18n="footer.hotProjects">热门项目</h4>
           <a href="xedu-client.html">XEdu Client</a>
-          <a href="/handpy">掌控板</a>
-          <a href="/vvlink">虚谷物联</a>
+          <a href="/handpy" data-i18n="proj.handpy">掌控板</a>
+          <a href="/vvlink" data-i18n="proj.vvlink">虚谷物联</a>
           <a href="https://quickform.cc/" target="_blank" rel="noopener">QuickForm</a>
           <a href="https://xedupro.cn/" target="_blank" rel="noopener">XEduPro</a>
           <a href="https://openhydra.net/" target="_blank" rel="noopener">OpenHydra</a>
         </div>
         <div class="footer-links">
-          <h4>导航</h4>
-          <a href="list.html">项目列表</a>
-          <a href="about.html">关于我们</a>
-          <a href="maker.html">创客教育</a>
-          <a href="ai.html">人工智能</a>
+          <h4 data-i18n="footer.nav">导航</h4>
+          <a href="list.html" data-i18n="nav.list">项目列表</a>
+          <a href="about.html" data-i18n="footer.aboutUs">关于我们</a>
+          <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+          <a href="ai.html" data-i18n="nav.ai">人工智能</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
+        <p data-i18n="footer.copyright">© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script>
     // Header scroll effect
     const header = document.getElementById('header');

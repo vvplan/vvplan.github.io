@@ -10,22 +10,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-i18n-title="ai.title" data-i18n-desc="ai.metaDesc">
   <!-- Navigation -->
   <header class="site-header scrolled" id="header">
     <div class="container nav-container">
       <a class="logo" href="/">
         <span class="logo-mark">虚</span>
-        <span class="logo-text">虚谷计划</span>
+        <span class="logo-text" data-i18n="site.logoText">虚谷计划</span>
       </a>
       <nav class="main-nav">
-        <a href="about.html">关于计划</a>
-        <a href="maker.html">创客教育</a>
-        <a href="ai.html">人工智能</a>
-        <a href="ecosystem.html">生态伙伴</a>
-        <a href="list.html" class="btn btn-sm btn-outline">项目列表</a>
+        <a href="about.html" data-i18n="nav.about">关于计划</a>
+        <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+        <a href="ai.html" data-i18n="nav.ai">人工智能</a>
+        <a href="ecosystem.html" data-i18n="nav.ecosystem">生态伙伴</a>
+        <a href="list.html" class="btn btn-sm btn-outline" data-i18n="nav.list">项目列表</a>
+        <div class="lang-dropdown" data-i18n-dropdown>
+    <button class="btn btn-sm btn-lang lang-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Choose language">
+      <span class="lang-label">简体中文</span>
+      <span class="lang-caret">▾</span>
+    </button>
+    <div class="lang-dropdown-menu" role="listbox">
+      <button class="lang-option is-active" data-lang-option="zh" role="option" aria-selected="true">简体中文</button>
+      <button class="lang-option" data-lang-option="tw" role="option" aria-selected="false">繁體中文</button>
+      <button class="lang-option" data-lang-option="en" role="option" aria-selected="false">English</button>
+    </div>
+  </div>
       </nav>
-      <button class="menu-toggle" aria-label="菜单" id="menuToggle">
+      <button class="menu-toggle" aria-label="菜单" data-i18n-aria="nav.menu" id="menuToggle">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -33,18 +44,29 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="about.html">关于计划</a>
-    <a href="maker.html">创客教育</a>
-    <a href="ai.html">人工智能</a>
-    <a href="ecosystem.html">生态伙伴</a>
-    <a href="list.html">项目列表</a>
+    <a href="about.html" data-i18n="nav.about">关于计划</a>
+    <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+    <a href="ai.html" data-i18n="nav.ai">人工智能</a>
+    <a href="ecosystem.html" data-i18n="nav.ecosystem">生态伙伴</a>
+    <a href="list.html" data-i18n="nav.list">项目列表</a>
+    <div class="lang-dropdown lang-dropdown-mobile" data-i18n-dropdown>
+    <button class="btn btn-lang btn-lang-mobile lang-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Choose language">
+      <span class="lang-label">简体中文</span>
+      <span class="lang-caret">▾</span>
+    </button>
+    <div class="lang-dropdown-menu" role="listbox">
+      <button class="lang-option is-active" data-lang-option="zh" role="option" aria-selected="true">简体中文</button>
+      <button class="lang-option" data-lang-option="tw" role="option" aria-selected="false">繁體中文</button>
+      <button class="lang-option" data-lang-option="en" role="option" aria-selected="false">English</button>
+    </div>
+  </div>
   </div>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>AI 教育新生态</h1>
-      <p>2022 年后，虚谷计划逐步转向人工智能教育。这些工具与平台让人工智能学习变得简单、可实践、可落地。</p>
+      <h1 data-i18n="ai.pageTitle">AI 教育新生态</h1>
+      <p data-i18n="ai.pageSubtitle">2022 年后，虚谷计划逐步转向人工智能教育。这些工具与平台让人工智能学习变得简单、可实践、可落地。</p>
     </div>
   </section>
 
@@ -57,12 +79,12 @@
           <div class="ai-body">
             <div class="ai-meta">
               <span>2022</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>XEduPro</h3>
-            <div class="ai-founder">发起人（单位）：<strong>谢作如、钟柏昌</strong></div>
-            <p>一套开箱即用的人工智能学习工具，已成为人工智能初学者必用学习工具。</p>
-            <span class="project-link">访问项目 →</span>
+            <div class="ai-founder"><span data-i18n="ai.founder">发起人（单位）：</span><strong>谢作如、钟柏昌</strong></div>
+            <p data-i18n="ai.xeduproDesc">一套开箱即用的人工智能学习工具，已成为人工智能初学者必用学习工具。</p>
+            <span class="project-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://openhydra.net/" target="_blank" rel="noopener" class="ai-card ai-hydra">
@@ -70,12 +92,12 @@
           <div class="ai-body">
             <div class="ai-meta">
               <span>2024</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>OpenHydra</h3>
-            <div class="ai-founder">发起人（单位）：<strong>谢作如、钟柏昌</strong></div>
-            <p>为中小学设计的 AI 教学平台，让学校轻松部署与开展人工智能课程。</p>
-            <span class="project-link">访问项目 →</span>
+            <div class="ai-founder"><span data-i18n="ai.founder">发起人（单位）：</span><strong>谢作如、钟柏昌</strong></div>
+            <p data-i18n="ai.openhydraDesc">为中小学设计的 AI 教学平台，让学校轻松部署与开展人工智能课程。</p>
+            <span class="project-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://quickform.cc/" target="_blank" rel="noopener" class="ai-card ai-form">
@@ -83,12 +105,12 @@
           <div class="ai-body">
             <div class="ai-meta">
               <span>2025</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>QuickForm</h3>
-            <div class="ai-founder">发起人（单位）：<strong>谢作如、方建文</strong></div>
-            <p>为 AI 大模型开发交互网页设计的数据服务，已拥有 3 万多教师用户。</p>
-            <span class="project-link">访问项目 →</span>
+            <div class="ai-founder"><span data-i18n="ai.founder">发起人（单位）：</span><strong>谢作如、方建文</strong></div>
+            <p data-i18n="ai.quickformDesc">为 AI 大模型开发交互网页设计的数据服务，已拥有 3 万多教师用户。</p>
+            <span class="project-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://gitee.com/maoyouhui/quickclass-release/" target="_blank" rel="noopener" class="ai-card ai-class">
@@ -96,12 +118,12 @@
           <div class="ai-body">
             <div class="ai-meta">
               <span>2026</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>QuickClass</h3>
-            <div class="ai-founder">发起人（单位）：<strong>管雪沨</strong></div>
-            <p>一个 AI 驱动的课堂教学辅助平台，助力教师打造更高效的智能课堂。</p>
-            <span class="project-link">访问项目 →</span>
+            <div class="ai-founder"><span data-i18n="ai.founder">发起人（单位）：</span><strong>管雪沨</strong></div>
+            <p data-i18n="ai.quickclassDesc">一个 AI 驱动的课堂教学辅助平台，助力教师打造更高效的智能课堂。</p>
+            <span class="project-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="xedu-client.html" class="ai-card ai-client">
@@ -109,12 +131,12 @@
           <div class="ai-body">
             <div class="ai-meta">
               <span>2026</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>XEdu Client</h3>
-            <div class="ai-founder">发起人（单位）：<strong>王海涛、XEdu Team</strong></div>
-            <p>面向 AI 教学场景的桌面实验工作台，把课程资源、Scratch 与 Python/Jupyter 实验组织到同一入口。</p>
-            <span class="project-link">访问项目 →</span>
+            <div class="ai-founder"><span data-i18n="ai.founder">发起人（单位）：</span><strong>王海涛、XEdu Team</strong></div>
+            <p data-i18n="ai.xeduclientDesc">面向 AI 教学场景的桌面实验工作台，把课程资源、Scratch 与 Python/Jupyter 实验组织到同一入口。</p>
+            <span class="project-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
       </div>
@@ -128,33 +150,34 @@
         <div class="footer-brand">
           <a class="logo" href="/">
             <span class="logo-mark">虚</span>
-            <span class="logo-text">虚谷计划</span>
+            <span class="logo-text" data-i18n="site.logoText">虚谷计划</span>
           </a>
-          <p>中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
+          <p data-i18n="footer.tagline">中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
         </div>
         <div class="footer-links">
-          <h4>热门项目</h4>
+          <h4 data-i18n="footer.hotProjects">热门项目</h4>
           <a href="xedu-client.html">XEdu Client</a>
-          <a href="/handpy">掌控板</a>
-          <a href="/vvlink">虚谷物联</a>
+          <a href="/handpy" data-i18n="proj.handpy">掌控板</a>
+          <a href="/vvlink" data-i18n="proj.vvlink">虚谷物联</a>
           <a href="https://quickform.cc/" target="_blank" rel="noopener">QuickForm</a>
           <a href="https://xedupro.cn/" target="_blank" rel="noopener">XEduPro</a>
           <a href="https://openhydra.net/" target="_blank" rel="noopener">OpenHydra</a>
         </div>
         <div class="footer-links">
-          <h4>导航</h4>
-          <a href="list.html">项目列表</a>
-          <a href="about.html">关于我们</a>
-          <a href="maker.html">创客教育</a>
-          <a href="ai.html">人工智能</a>
+          <h4 data-i18n="footer.nav">导航</h4>
+          <a href="list.html" data-i18n="nav.list">项目列表</a>
+          <a href="about.html" data-i18n="footer.aboutUs">关于我们</a>
+          <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+          <a href="ai.html" data-i18n="nav.ai">人工智能</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
+        <p data-i18n="footer.copyright">© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');

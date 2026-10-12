@@ -12,22 +12,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-i18n-title="site.defaultTitle" data-i18n-desc="site.defaultDesc">
   <!-- Navigation -->
   <header class="site-header" id="header">
     <div class="container nav-container">
       <a class="logo" href="/">
         <span class="logo-mark">虚</span>
-        <span class="logo-text">虚谷计划</span>
+        <span class="logo-text" data-i18n="site.logoText">虚谷计划</span>
       </a>
       <nav class="main-nav">
-        <a href="about.html">关于计划</a>
-        <a href="maker.html">创客教育</a>
-        <a href="ai.html">人工智能</a>
-        <a href="ecosystem.html">生态伙伴</a>
-        <a href="list.html" class="btn btn-sm btn-outline">项目列表</a>
+        <a href="about.html" data-i18n="nav.about">关于计划</a>
+        <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+        <a href="ai.html" data-i18n="nav.ai">人工智能</a>
+        <a href="ecosystem.html" data-i18n="nav.ecosystem">生态伙伴</a>
+        <a href="list.html" class="btn btn-sm btn-outline" data-i18n="nav.list">项目列表</a>
+        <div class="lang-dropdown" data-i18n-dropdown>
+    <button class="btn btn-sm btn-lang lang-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Choose language">
+      <span class="lang-label">简体中文</span>
+      <span class="lang-caret">▾</span>
+    </button>
+    <div class="lang-dropdown-menu" role="listbox">
+      <button class="lang-option is-active" data-lang-option="zh" role="option" aria-selected="true">简体中文</button>
+      <button class="lang-option" data-lang-option="tw" role="option" aria-selected="false">繁體中文</button>
+      <button class="lang-option" data-lang-option="en" role="option" aria-selected="false">English</button>
+    </div>
+  </div>
       </nav>
-      <button class="menu-toggle" aria-label="菜单" id="menuToggle">
+      <button class="menu-toggle" aria-label="菜单" data-i18n-aria="nav.menu" id="menuToggle">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -35,11 +46,22 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="about.html">关于计划</a>
-    <a href="maker.html">创客教育</a>
-    <a href="ai.html">人工智能</a>
-    <a href="ecosystem.html">生态伙伴</a>
-    <a href="list.html">项目列表</a>
+    <a href="about.html" data-i18n="nav.about">关于计划</a>
+    <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+    <a href="ai.html" data-i18n="nav.ai">人工智能</a>
+    <a href="ecosystem.html" data-i18n="nav.ecosystem">生态伙伴</a>
+    <a href="list.html" data-i18n="nav.list">项目列表</a>
+    <div class="lang-dropdown lang-dropdown-mobile" data-i18n-dropdown>
+    <button class="btn btn-lang btn-lang-mobile lang-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Choose language">
+      <span class="lang-label">简体中文</span>
+      <span class="lang-caret">▾</span>
+    </button>
+    <div class="lang-dropdown-menu" role="listbox">
+      <button class="lang-option is-active" data-lang-option="zh" role="option" aria-selected="true">简体中文</button>
+      <button class="lang-option" data-lang-option="tw" role="option" aria-selected="false">繁體中文</button>
+      <button class="lang-option" data-lang-option="en" role="option" aria-selected="false">English</button>
+    </div>
+  </div>
   </div>
 
   <!-- Hero -->
@@ -52,31 +74,31 @@
     <div class="container hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        虚怀若谷，共创未来
+        <span data-i18n="index.badge">虚怀若谷，共创未来</span>
       </div>
       <h1 class="hero-title">
-        让人工智能与开源硬件<br>
-        <span class="text-gradient">点亮每一间课堂</span>
+        <span data-i18n="index.title1">让人工智能与开源硬件</span><br>
+        <span class="text-gradient" data-i18n="index.title2">点亮每一间课堂</span>
       </h1>
-      <p class="hero-desc">
+      <p class="hero-desc" data-i18n="index.desc">
         虚谷计划是一个包含硬件和软件的开源教育项目，由一线教师联合高校、创客空间和科技企业共同发起，致力于为中国青少年提供完整、开放、可复制、可实践的人工智能与科技教育解决方案。
       </p>
       <div class="hero-actions">
-        <a href="maker.html" class="btn btn-primary btn-lg">探索项目</a>
-        <a href="about.html" class="btn btn-ghost btn-lg">了解愿景</a>
+        <a href="maker.html" class="btn btn-primary btn-lg" data-i18n="index.ctaExplore">探索项目</a>
+        <a href="about.html" class="btn btn-ghost btn-lg" data-i18n="index.ctaVision">了解愿景</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
           <div class="stat-number">9</div>
-          <div class="stat-label">核心开源项目</div>
+          <div class="stat-label" data-i18n="index.statProjects">核心开源项目</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">2018</div>
-          <div class="stat-label">发起年份</div>
+          <div class="stat-label" data-i18n="index.statFounded">发起年份</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">3万+</div>
-          <div class="stat-label">教师用户</div>
+          <div class="stat-label" data-i18n="index.statTeachers">教师用户</div>
         </div>
       </div>
     </div>
@@ -90,33 +112,33 @@
     <div class="container">
       <div class="projects-scroll-header">
         <div>
-          <span class="section-tag">开源教育项目</span>
-          <h2 class="section-title">九大核心项目</h2>
-          <p class="section-subtitle">从创客硬件到人工智能平台，虚谷计划覆盖完整的教育技术生态。</p>
+          <span class="section-tag" data-i18n="index.projectsTag">开源教育项目</span>
+          <h2 class="section-title" data-i18n="index.projectsTitle">九大核心项目</h2>
+          <p class="section-subtitle" data-i18n="index.projectsSubtitle">从创客硬件到人工智能平台，虚谷计划覆盖完整的教育技术生态。</p>
         </div>
-        <a href="list.html" class="btn btn-primary">查看项目列表</a>
+        <a href="list.html" class="btn btn-primary" data-i18n="index.viewAll">查看项目列表</a>
       </div>
       <article class="featured-project">
         <div class="featured-project-copy">
           <div class="featured-project-meta">
-            <span class="featured-project-badge">2026 重点项目</span>
-            <span class="project-status status-active">持续中</span>
+            <span class="featured-project-badge" data-i18n="index.featuredBadge">2026 重点项目</span>
+            <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
           </div>
           <h3>XEdu Client</h3>
-          <p class="featured-project-tagline">面向 AI 教学场景的桌面实验工作台</p>
-          <p class="featured-project-desc">
+          <p class="featured-project-tagline" data-i18n="index.featuredTagline">面向 AI 教学场景的桌面实验工作台</p>
+          <p class="featured-project-desc" data-i18n="index.featuredDesc">
             把课程任务、互动体验、Scratch 图形编程和 Python/Jupyter 实验组织到同一桌面入口，
             让教师更容易发起课堂任务，也让学生更快进入真实实验环境。
           </p>
           <ul class="featured-project-points">
-            <li>课程资源</li>
-            <li>Jupyter</li>
-            <li>Scratch</li>
-            <li>课堂接入</li>
+            <li data-i18n="index.featured.p1">课程资源</li>
+            <li data-i18n="index.featured.p2">Jupyter</li>
+            <li data-i18n="index.featured.p3">Scratch</li>
+            <li data-i18n="index.featured.p4">课堂接入</li>
           </ul>
           <div class="featured-project-actions">
-            <a href="xedu-client.html" class="btn btn-primary">了解项目</a>
-            <a href="https://github.com/XEduPro/xedu-client" target="_blank" rel="noopener" class="btn btn-outline">查看源码</a>
+            <a href="xedu-client.html" class="btn btn-primary" data-i18n="index.featuredLearn">了解项目</a>
+            <a href="https://github.com/XEduPro/xedu-client" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="index.featuredSource">查看源码</a>
           </div>
         </div>
         <a class="featured-project-visual" href="xedu-client.html">
@@ -133,11 +155,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2026</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>XEdu Client</h3>
-            <p>面向 AI 教学场景的桌面实验工作台。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <p data-i18n="index.xeduDesc">面向 AI 教学场景的桌面实验工作台。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://gitee.com/maoyouhui/quickclass-release/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -147,11 +169,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2026</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>QuickClass</h3>
-            <p>一个 AI 驱动的课堂教学辅助平台。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <p data-i18n="index.quickclassDesc">一个 AI 驱动的课堂教学辅助平台。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://quickform.cc/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -161,11 +183,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2025</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>QuickForm</h3>
-            <p>为 AI 大模型开发交互网页设计的数据服务。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <p data-i18n="index.quickformDesc">为 AI 大模型开发交互网页设计的数据服务。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://openhydra.net/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -175,11 +197,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2024</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>OpenHydra</h3>
-            <p>为中小学设计的 AI 教学平台。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <p data-i18n="index.openhydraDesc">为中小学设计的 AI 教学平台。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://xedupro.cn/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -189,11 +211,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2022</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
             <h3>XEduPro</h3>
-            <p>一套开箱即用的人工智能学习工具。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <p data-i18n="index.xeduproDesc">一套开箱即用的人工智能学习工具。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://www.vvplan.cn/laserblock/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -203,11 +225,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2020</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
-            <h3>乐造模块</h3>
-            <p>利用激光切割技术加工的木质结构件。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <h3 data-i18n="proj.laserblock">乐造模块</h3>
+            <p data-i18n="index.laserblockDesc">利用激光切割技术加工的木质结构件。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://www.vvplan.cn/vvlink/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -217,11 +239,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2019</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
-            <h3>虚谷物联</h3>
-            <p>一套开箱即用物联网工具包。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <h3 data-i18n="proj.vvlink">虚谷物联</h3>
+            <p data-i18n="index.vvlinkDesc">一套开箱即用物联网工具包。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://www.vvplan.cn/vvboard/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -231,11 +253,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2018</span>
-              <span class="project-status status-stopped">已停止</span>
+              <span class="project-status status-stopped" data-i18n="index.statusStopped">已停止</span>
             </div>
-            <h3>虚谷号</h3>
-            <p>一款能运行 Python 的开源硬件。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <h3 data-i18n="proj.vvboard">虚谷号</h3>
+            <p data-i18n="index.vvboardDesc">一款能运行 Python 的开源硬件。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
         <a href="https://www.vvplan.cn/handpy/" target="_blank" rel="noopener" class="project-scroll-card">
@@ -245,11 +267,11 @@
           <div class="project-scroll-body">
             <div class="project-scroll-meta">
               <span>2018</span>
-              <span class="project-status status-active">持续中</span>
+              <span class="project-status status-active" data-i18n="index.statusActive">持续中</span>
             </div>
-            <h3>掌控板</h3>
-            <p>一款集成常见电子模块的开源硬件。</p>
-            <span class="project-scroll-link">访问项目 →</span>
+            <h3 data-i18n="proj.handpy">掌控板</h3>
+            <p data-i18n="index.handpyDesc">一款集成常见电子模块的开源硬件。</p>
+            <span class="project-scroll-link" data-i18n="card.visit">访问项目 →</span>
           </div>
         </a>
       </div>
@@ -261,30 +283,30 @@
     <div class="container">
       <div class="ecosystem-inner">
         <div class="ecosystem-content">
-          <span class="section-tag">生态伙伴</span>
-          <h2 class="section-title">携手共建<br>开源教育未来</h2>
-          <p>虚谷计划的成长离不开一线教育工作者的实践反馈、高校研究者的学术支撑、创客空间的社区运营，以及企业工程师的技术贡献。我们期待与更多伙伴一起，让优质的开源教育惠及每一位学生。</p>
+          <span class="section-tag" data-i18n="index.ecoTag">生态伙伴</span>
+          <h2 class="section-title"><span data-i18n="index.ecoTitle1">携手共建</span><br><span data-i18n="index.ecoTitle2">开源教育未来</span></h2>
+          <p data-i18n="index.ecoDesc">虚谷计划的成长离不开一线教育工作者的实践反馈、高校研究者的学术支撑、创客空间的社区运营，以及企业工程师的技术贡献。我们期待与更多伙伴一起，让优质的开源教育惠及每一位学生。</p>
           <div class="ecosystem-actions">
-            <a href="mailto:xiezuoru@qq.vip.com" class="btn btn-primary">成为伙伴</a>
-            <a href="list.html" class="btn btn-ghost">查看项目列表</a>
+            <a href="mailto:xiezuoru@qq.vip.com" class="btn btn-primary" data-i18n="index.ecoBecome">成为伙伴</a>
+            <a href="list.html" class="btn btn-ghost" data-i18n="index.ecoViewList">查看项目列表</a>
           </div>
         </div>
         <div class="ecosystem-roles">
           <div class="role-card">
-            <strong>一线教师</strong>
-            <span>课程实践 · 案例共创</span>
+            <strong data-i18n="index.eco.role1.name">一线教师</strong>
+            <span data-i18n="index.eco.role1.desc">课程实践 · 案例共创</span>
           </div>
           <div class="role-card">
-            <strong>高校院所</strong>
-            <span>学术研究 · 师资培训</span>
+            <strong data-i18n="index.eco.role2.name">高校院所</strong>
+            <span data-i18n="index.eco.role2.desc">学术研究 · 师资培训</span>
           </div>
           <div class="role-card">
-            <strong>创客空间</strong>
-            <span>社区运营 · 活动组织</span>
+            <strong data-i18n="index.eco.role3.name">创客空间</strong>
+            <span data-i18n="index.eco.role3.desc">社区运营 · 活动组织</span>
           </div>
           <div class="role-card">
-            <strong>科技企业</strong>
-            <span>硬件研发 · 技术支持</span>
+            <strong data-i18n="index.eco.role4.name">科技企业</strong>
+            <span data-i18n="index.eco.role4.desc">硬件研发 · 技术支持</span>
           </div>
         </div>
       </div>
@@ -295,11 +317,11 @@
   <section class="section section-cta-large">
     <div class="container">
       <div class="cta-card">
-        <h2>开启你的开源教育探索</h2>
-        <p>从一块掌控板、一个 XEduPro 工具开始，和学生一起动手创造未来。</p>
+        <h2 data-i18n="index.ctaBigTitle">开启你的开源教育探索</h2>
+        <p data-i18n="index.ctaBigDesc">从一块掌控板、一个 XEduPro 工具开始，和学生一起动手创造未来。</p>
         <div class="cta-actions">
-          <a href="maker.html" class="btn btn-light btn-lg">走进创客</a>
-          <a href="ai.html" class="btn btn-light btn-lg">走进AI</a>
+          <a href="maker.html" class="btn btn-light btn-lg" data-i18n="index.ctaMaker">走进创客</a>
+          <a href="ai.html" class="btn btn-light btn-lg" data-i18n="index.ctaAI">走进AI</a>
         </div>
       </div>
     </div>
@@ -312,33 +334,34 @@
         <div class="footer-brand">
           <a class="logo" href="/">
             <span class="logo-mark">虚</span>
-            <span class="logo-text">虚谷计划</span>
+            <span class="logo-text" data-i18n="site.logoText">虚谷计划</span>
           </a>
-          <p>中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
+          <p data-i18n="footer.tagline">中国的开源教育计划，让人工智能与开源硬件点亮每一间课堂。</p>
         </div>
         <div class="footer-links">
-          <h4>热门项目</h4>
+          <h4 data-i18n="footer.hotProjects">热门项目</h4>
           <a href="xedu-client.html">XEdu Client</a>
-          <a href="/handpy">掌控板</a>
-          <a href="/vvlink">虚谷物联</a>
+          <a href="/handpy" data-i18n="proj.handpy">掌控板</a>
+          <a href="/vvlink" data-i18n="proj.vvlink">虚谷物联</a>
           <a href="https://quickform.cc/" target="_blank" rel="noopener">QuickForm</a>
           <a href="https://xedupro.cn/" target="_blank" rel="noopener">XEduPro</a>
           <a href="https://openhydra.net/" target="_blank" rel="noopener">OpenHydra</a>
         </div>
         <div class="footer-links">
-          <h4>导航</h4>
-          <a href="list.html">项目列表</a>
-          <a href="about.html">关于我们</a>
-          <a href="maker.html">创客教育</a>
-          <a href="ai.html">人工智能</a>
+          <h4 data-i18n="footer.nav">导航</h4>
+          <a href="list.html" data-i18n="nav.list">项目列表</a>
+          <a href="about.html" data-i18n="footer.aboutUs">关于我们</a>
+          <a href="maker.html" data-i18n="nav.maker">创客教育</a>
+          <a href="ai.html" data-i18n="nav.ai">人工智能</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
+        <p data-i18n="footer.copyright">© 虚谷计划组委会 2018 — 2026. 保留所有权利。</p>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script>
     // Header scroll effect
     const header = document.getElementById('header');
